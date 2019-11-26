@@ -4,6 +4,6 @@ MAINTAINER tofik <email@example.com>
 WORKDIR /app
 ADD . .
 RUN npm install
-EXPOSE 3000
+EXPOSE 83
 
 CMD [ "node", "app.js" ]
