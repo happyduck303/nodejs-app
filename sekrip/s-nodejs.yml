@@ -1,0 +1,27 @@
+# Deploy the pods
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: s-nodejs-deployment
+  namespace: staging
+  labels:
+    app: nodejs
+    env: staging
+spec:
+  selector:
+    matchLabels:
+      app: s-nodejs
+      env: staging
+  replicas: 1
+  template:
+    metadata:
+      labels:
+        app: s-nodejs
+        env: staging
+    spec:
+      containers:
+        - name: s-nodejs
+          image: happyduck/nodejs_app:latest
+          imagePullPolicy: Always
+          ports:
+          - containerPort: 3000
