@@ -1,5 +1,5 @@
 FROM node:12-alpine
-MAINTAINER tofik <email@example.com>
+MAINTAINER taufik fickysyahreza.fs@gmail.com
 
 WORKDIR /app
 ADD . .
