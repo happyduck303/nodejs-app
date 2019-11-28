@@ -4,6 +4,6 @@ MAINTAINER taufik fickysyahreza.fs@gmail.com
 WORKDIR /app
 ADD . .
 RUN npm install
-EXPOSE 83
+EXPOSE 3000
 
 CMD [ "node", "app.js" ]
